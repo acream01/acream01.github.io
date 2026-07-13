@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Project Log</title>
+  <meta name="description" content="A log of projects, builds, and experiments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="index.html" class="brand"><span class="brand-mark">&gt;</span> your-name</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="mailto:you@example.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO / INTRO ============ -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="title-block">
+        <span class="hero-corner-a"></span>
+        <span class="hero-corner-b"></span>
+        <span class="eyebrow">Project Log — Vol. 01</span>
+        <h1>Hi, I'm [Your Name].</h1>
+        <p class="intro-text">
+          Write your introduction here. A couple of sentences about who you are,
+          what you build, and what kind of projects live on this page — hardware,
+          software, art, whatever it is. Keep it short; the work below should do
+          most of the talking.
+        </p>
+
+        <div class="title-block-meta">
+          <div class="meta-item">
+            <span class="label">Based in</span>
+            <span class="value">Your City</span>
+          </div>
+          <div class="meta-item">
+            <span class="label">Focus</span>
+            <span class="value">Robotics / Software / Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="label">Contact</span>
+            <span class="value"><a href="mailto:you@example.com">you@example.com</a></span>
+          </div>
+          <div class="meta-item">
+            <span class="label">Elsewhere</span>
+            <span class="value"><a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PROJECTS GRID ============ -->
+  <main class="projects" id="projects">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2>Projects</h2>
+        <span class="count">3 entries</span>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- ---- Project card ----
+             Copy this <a class="project-card"> block for each new project.
+             Replace the image src, fig number, title, description, and tags.
+             Swap thumb-placeholder for a real <img> once you have an image. -->
+
+        <a class="project-card" href="projects/project-1.html">
+          <div class="thumb-frame">
+            <div class="thumb-img-wrap">
+              <img src="assets/images/project-1-thumb.jpg" alt="Project One thumbnail">
+            </div>
+          </div>
+          <span class="fig-label">Fig. 01</span>
+          <h3>Project One</h3>
+          <p>One line describing what this project is and why it exists.</p>
+          <div class="tag-row">
+            <span class="tag">Robotics</span>
+            <span class="tag">Python</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/project-2.html">
+          <div class="thumb-frame">
+            <div class="thumb-img-wrap">
+              <img src="assets/images/project-2-thumb.jpg" alt="Project Two thumbnail">
+            </div>
+          </div>
+          <span class="fig-label">Fig. 02</span>
+          <h3>Project Two</h3>
+          <p>One line describing what this project is and why it exists.</p>
+          <div class="tag-row">
+            <span class="tag">3D Printing</span>
+            <span class="tag">CAD</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/project-3.html">
+          <div class="thumb-frame">
+            <div class="thumb-img-wrap">
+              <img src="assets/images/project-3-thumb.jpg" alt="Project Three thumbnail">
+            </div>
+          </div>
+          <span class="fig-label">Fig. 03</span>
+          <h3>Project Three</h3>
+          <p>One line describing what this project is and why it exists.</p>
+          <div class="tag-row">
+            <span class="tag">Web</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Your Name.</p>
+      <p>Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
