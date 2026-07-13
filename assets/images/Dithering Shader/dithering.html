@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Aidan Ream Final CSC 471 Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-image: url('Flag_of_Italy.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1, h2 {
+            color: #000000;
+        }
+        p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        img {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #292424;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .references {
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dithered Hydra Attacks Rome, Italy (oh no)</h1>
+        <h2>Aidan Ream | Final CSC 471 Project</h2>
+        <p>
+            3D interactive Computer Graphics scene that implements dither shading.
+            The technology I chose to implement was a shader design based on the game <i>Return of the Obra Dinn</i>.
+            The shading technique, called Dithering, was originally developed for print to trick the eyes into seeing
+            a multitude of shades while only using two colors.
+        </p>
+
+        <h2>Example Screenshots</h2>
+
+        <img src="DitherHydra.jpg" alt="Hydra with Basilica">
+        <img src="SkyView.png" alt="Sky view of Hydra">
+
+        <h2>Base Example</h2>
+        <img src="HydraBasilica.png" alt="Basic Dither Shading">
+
+        <h2>No Dither Shading</h2>
+        <img src="WithoutDithering.png" alt="No dither shading">
+
+        <h2>Close-up of the 8x8 Bayer Matrix Pattern</h2>
+        <img src="DitherZoom.png" alt="Zoom on the pattern">
+
+        <h1>References</h1>
+        <div class="references">
+            <p>Great in-depth look at a similar project by NBAyunjay:
+                <a href="https://github.com/yunjay/Return-of-the-One-Bit" target="_blank">GitHub Project</a>
+            </p>
+            <p>A great tutorial describing the underlying concepts:
+                <a href="https://medium.com/the-bkpt/dithered-shading-tutorial-29f57d06ac39" target="_blank">Medium Tutorial</a>
+            </p>
+            <p>An overview of the technique and what it can be used for:
+                <a href="https://blog.maximeheckel.com/posts/the-art-of-dithering-and-retro-shading-web/" target="_blank">Maxime Heckel's Blog</a>
+            </p>
+            <p>Wikipedia page covering Bayer matrices and other dithering implementations:
+                <a href="https://en.wikipedia.org/wiki/Dither" target="_blank">Wikipedia: Dither</a>
+            </p>
+            <p>Book Reference: <i>Halftone Dithering Method</i> from Jonas Gomes, <i>Image Processing for Computer Graphics, 1997</i></p>
+        </div>
+    </div>
+
+</body>
+</html>
