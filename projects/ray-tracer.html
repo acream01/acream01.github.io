@@ -80,10 +80,16 @@
       </p>
       
       <h3>
-        Texture Mapping
+        Texture Mapping and Vertex Normal support
       </h3>
       
-      <p>Texture coordinates are incorporated for every primitive, including spheres, quads, and triangles.</p>
+      <p>
+        Texture coordinates are incorporated for every primitive, including spheres, quads, and triangles.
+        This allows you to map a 2D image onto the 3D object, whichever primitive it is. Additionally I have added
+        support for vertex normals which helps smooth out objects, as it interpolates the normal value read as 
+        the ray intersection moves between verteces for meshes. 
+
+      </p>
       
       <h3>
         Atmospheric Perspective Camera effect
@@ -129,6 +135,7 @@
     </div>
 
 
+    <h2>Some more renders</h2>
     <!-- A grid for supporting photos/videos. Add or remove media-block
          divs as needed; the grid re-flows automatically. -->
     <div class="media-grid">
@@ -139,7 +146,31 @@
         <img src="../assets/images/Raytracer/PDF/AluminumCornell.png" alt="Aluminum Cornell Box Example">
       </div>
     </div>
-    
+        <div class="media-grid">
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/ExampleScene7.png" alt="Monte Carlo">
+      </div>
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/Weekend/finalRenderV3.png" alt="Aluminum Cornell Box Example">
+      </div>
+    </div>
+    <div class="media-grid">
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/metalBunny.png" alt="Monte Carlo">
+      </div>
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/cornellBunnyMetal.png" alt="Aluminum Cornell Box Example">
+      </div>
+    </div>
+        <div class="media-grid">
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/triangleEdgeDev.png" alt="Monte Carlo">
+      </div>
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/Weekend/blueandmarble.png" alt="Aluminum Cornell Box Example">
+      </div>
+    </div>
+
     <h2>Future Work</h2>
     <p>
       Additional work to be implemented is a sequence renderer for animations & animation translation, a tilt shifted
