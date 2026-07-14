@@ -46,23 +46,55 @@
     <h2>Overview</h2>
     <p>
       Raytracer developed by following the Ray Tracing in One Weekend series by Peter Shirley, with
-      Additional features implemented at every step. 
+      additional features implemented at every step. Additional features are detailed as followed:
     </p>
       <h3>
         Render Timer
       </h3>
+      <p>
+        A timer that tracks the progress of rendering accross multiple threads, and gives an accurate rendering
+        time at the end.
+      </p>
       <h3>
         PNG output
       </h3>
+      <p>
+        Images created are put into the png format rather than ppm utilizing the stb_image_write.h header.
+      </p>
+
       <h3>  
         Multithreading
       </h3>
+      <p>
+        Multiple threads parralelize the rendering process, making the render much faster. Currently
+        it just utilizes the multiple cores of the CPU for rendering but future GPU acceleration should
+        be possible.
+        </p>
       <h3>
         OBJ mesh and Triangle Rendering
       </h3>
+      <p>
+        Triangle primitives and OBJ loading using tinyOBJ loader. Texture coordinates, materials, and 
+        geometry transformations are all supported. All quads and polygon meshes are automatically triangulized
+        by tinyOBJ loader.
+      </p>
       <h3>
         Atmospheric Perspective Camera effect
       </h3>
+      <p>
+        Atmospheric Perspective is the effect where as light travels into the distance, random particles in
+        the air will scatter. This makes objects in the distance appear closer to the color of the sky, often shifted
+        blue in color. This effect is achieved by checking a random number with a scene defined distance to scatter 50%
+        of rays upon each ray cast, so the farther something is the larger the chance for a ray to scatter randomly and 
+        contribute a scattered color to the final pixel color attenuation.
+      </p>
+
+      <h3>
+        Texture Mapping
+      </h3>
+
+      <p>Texture coordinates are incorporated for every primitive, including spheres, quads, and triangles.</p>
+
 
     <h2>How it works</h2>
     <p>
