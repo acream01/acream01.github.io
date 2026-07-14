@@ -78,6 +78,13 @@
         geometry transformations are all supported. All quads and polygon meshes are automatically triangulized
         by tinyOBJ loader.
       </p>
+      
+      <h3>
+        Texture Mapping
+      </h3>
+      
+      <p>Texture coordinates are incorporated for every primitive, including spheres, quads, and triangles.</p>
+      
       <h3>
         Atmospheric Perspective Camera effect
       </h3>
@@ -89,11 +96,14 @@
         contribute a scattered color to the final pixel color attenuation.
       </p>
 
-      <h3>
-        Texture Mapping
-      </h3>
-
-      <p>Texture coordinates are incorporated for every primitive, including spheres, quads, and triangles.</p>
+      <div class="media-grid">
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/AtmosphericPerspective/atmosTest1TEMP.png" alt="No Atmospheric Perspective">
+      </div>
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/AtmosphericPerspective/atmosTest4.png" alt="Atmospheric Perspective">
+      </div>
+    </div>
 
 
     <h2>Monte Carlo Raytracing</h2>
@@ -103,6 +113,21 @@
       of rays to tend towards important sources of detail in the scene, like light sources, reflective surfaces, and dielectric
       sources particularly those that generate caustic light effects. 
     </p>
+
+    <p> 
+      This makes it so you get much better, more consistant results with less samples per pixel. It 
+      eliminates visual artifacts like particularly in dark scenes lit by lights within the scene itself.
+      Here is a before and after of a render that doesn't use monte carlo raytracing and one that does.
+    </p>
+    <div class="media-grid">
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/PDF/prePDFCornell.png" alt="No Atmospheric Perspective">
+      </div>
+      <div class="media-block">
+        <img src="../assets/images/Raytracer/PDF/MixtureDensityCornell.png" alt="Atmospheric Perspective">
+      </div>
+    </div>
+
 
     <!-- A grid for supporting photos/videos. Add or remove media-block
          divs as needed; the grid re-flows automatically. -->
@@ -114,15 +139,7 @@
         <img src="../assets/images/Raytracer/PDF/AluminumCornell.png" alt="Aluminum Cornell Box Example">
       </div>
     </div>
-    <div class="media-grid">
-      <div class="media-block">
-        <img src="../assets/images/Raytracer/AtmosphericPerspective/atmosTest1TEMP.png" alt="No Atmospheric Perspective">
-      </div>
-      <div class="media-block">
-        <img src="../assets/images/Raytracer/AtmosphericPerspective/atmosTest4.png" alt="Atmospheric Perspective">
-      </div>
-    </div>
-
+    
     <h2>Future Work</h2>
     <p>
       Additional work to be implemented is a sequence renderer for animations & animation translation, a tilt shifted
