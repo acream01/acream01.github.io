@@ -51,13 +51,42 @@
     <p>
       This game and engine was a collaboration between Aidan, Trish, Max, Noah, Chris, and Madeline 
       for an independant study course CSC 476 Real Time Computer Graphics taught by Dr. Zoë Wood
-      with help from T.A's Claire and Srini. Over the course of 10 weeks, we designed the gameplay,
+      with help from T.A's Claire and Srini. In only 10 weeks, we designed the gameplay,
        created the 3D models and animations, and built the custom game engine using OpenGL. 
     </p>
-      
+    <h3>Engine</h3>
     <p>
-      
+      The custom game engine was built in C++ with OpenGL. The rendering engine included
+      multiple shader effects like cat paw prints following the characters movement, deferred rendering for shading,
+      screen effects of color filters, a start screen and death screen, a robust particle system, 
+      and all programmed gameplay elements. It also incorporated some lightweight header files like Miniaudio.h
+       and Assimp asset importer to handle some of the resource managment. 
     </p>
+
+    <h3>Gameplay</h3>
+    <p>
+      The game is a 3D adventure roguelike game where you play the role of a cat wizard apprentice in a magical rearanging
+      library. In each run, the layout of the room is randomized with bookshelves, tables, and other furnature.
+    </p>
+    <p> 
+      In the room 3 types of aggressive elementals exist, and when aggrovated will approach with different movement patterns.
+      The Ice elemental will slowly follow the players position, the lightning elemental will teleport towards the player 
+      on a cooldown, and the fire elemental will attempt to cut the player character off by moving in a spiral patter into the player.
+    </p>     
+    <p>
+      To fend off the magical foes, the player has access to a dodge roll for burst movement, and is able to learn and accrue spells
+      from magical glowing bookshelves scattered accross the randomly generating map. The spells come in a veriety of types, Fire,
+      Ice, Electric, and Healing magic. The player is able to scroll through their current spell loadout to pick the best spell 
+      for the situation, as each enemy has a different weakness. 
+    </p>
+    <p>
+      After defeating 3 enemies, the player collects 3 keys and can then enter the boss room where the magical stone golem resides.
+      The boss has 3 phases including a projectile phase, a summoning phase, and a stomping phase. If you defeat the boss the next
+      loop begins with a special shader visual effect. Each loop is harder with more enemies spawning each time.
+    </p>
+
+    
+
 
     <h2>How it works</h2>
     <p>
@@ -90,10 +119,6 @@
       like a real log rather than a marketing page. Delete if not needed.
     </p>
 
-    <div class="project-nav-links">
-      <a href="project-1.html">&larr; Fig. 01: Project One</a>
-      <a href="project-3.html">Fig. 03: Project Three &rarr;</a>
-    </div>
   </main>
 
 <!-- ============ FOOTER ============ -->
