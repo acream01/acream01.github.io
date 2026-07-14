@@ -57,8 +57,8 @@
     <h3>Engine</h3>
     <p>
       The custom game engine was built in C++ with OpenGL. The rendering engine included
-      multiple shader effects like cat paw prints following the characters movement, deferred rendering for shading,
-      screen effects of color filters, a start screen and death screen, a robust particle system, 
+      multiple shader effects like cat paw prints following the characters movement, deferred rendering for shading
+      and shadows, screen effects of color filters, a start screen and death screen, a robust particle system, 
       and all programmed gameplay elements. It also incorporated some lightweight header files like Miniaudio.h
        and Assimp asset importer to handle some of the resource managment. 
     </p>
@@ -85,15 +85,47 @@
       loop begins with a special shader visual effect. Each loop is harder with more enemies spawning each time.
     </p>
 
-    
 
 
-    <h2>How it works</h2>
+
+    <h2>My Role</h2>
     <p>
-      Go into the interesting technical or design details here. This is the
-      place for diagrams, explanations of tricky parts, or decisions you're
-      proud of.
+      Everyone on the team had to contribute in many ways, my primary role was that of a technical artist
+      but there were many other pieces I contributed to the group project.
     </p>
+    <h3>Skeletal Animation System</h3>
+    <p>
+      My primary contribution was incorporating out system for bone transformations with vertex
+      weights so our character was able to be animated. There were several issues I ran into while
+      creating this feature, mainly the transformations were not constistant between my animation software
+      Blender and our game. In our game, the transformations would completely warp the character model, or
+      take the character out of world space and distort it in object space, disconected from the camera. 
+      After weeks of debugging and reworking, the animation system worked and I was able to import, access, 
+      and play animations in realtime gameplay!
+    </p>
+    <h3>3D Modeling and Animation</h3>
+    <p>
+      This project was my first introduction to the process of 3D modeling. I have since had far more experience
+      and would do a much better job, but this role included 10+ hours of learning Blender and practicing.
+      I 3D modeled our main character and the elementals, including material values and animations exported into an
+      fbx file and incorporated into the game. The characters were created to utilize a lowpoly aesthetic which
+      I have since had much more experience in modeling. 
+    </p>
+
+    <h3>Debugging Tools</h3>
+    <p>
+      Another large contribution to the project was the development of a debug camera mode that helped the whole team 
+      with fixing their changes. The camera disconects from the character and is given free flight movement, aswell as 
+      being able to reset the map generation, freeze the player character and enemy characters, and adjust the rendering
+      effects like shadows and color filters. 
+    </p>
+    <h3>Gameplay Design</h3>
+    <p>
+      The final most notable contribution was my additions to the gameplay design. The concept for this game came from a 
+      combination of the teams brainstorming ideas, like the cute cat library aesthetic and the roguelike elements, that
+      I pitched and developed with the team. 
+    </p>
+
 
     <!-- A grid for supporting photos/videos. Add or remove media-block
          divs as needed; the grid re-flows automatically. -->
@@ -112,12 +144,6 @@
         </video>
       </div>
     </div>
-
-    <h2>What I'd do differently</h2>
-    <p>
-      Optional, but reflective sections like this make a project page feel
-      like a real log rather than a marketing page. Delete if not needed.
-    </p>
 
   </main>
 
