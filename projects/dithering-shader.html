@@ -50,43 +50,58 @@
 
     <h2>Overview</h2>
     <p>
-      Describe what the project is, the problem it solves, and why you built it.
-      Two or three sentences is usually enough — this section sets the scene
-      before the details below.
+      Final project of first computer graphics course, CSC 471 Intro to Computer Graphics, using OpenGL we were tasked
+      with creating a scene with various interesting computer graphics effects. The effect I wanted to emulate was a 
+      dithering shading technique I saw implemented into a realtime 3D enviroment in the game Return of the Obra Dinn.
+      With the guidence of a github project by user NBAyunjay, along with a wikipedia page covering Bayer matrices and
+      a tutorial from writer Aeris on The Medium, I implemented a custom fragment shader that uses the effect for shading
+      in my scene.
     </p>
 
-    <h2>How it works</h2>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/SkyView.png" alt="Sky View">
+      </div>
+      <div class="media-block">
+      </div>
+
+    <h2>What is Dithering?</h2>
     <p>
-      Go into the interesting technical or design details here. This is the
-      place for diagrams, explanations of tricky parts, or decisions you're
-      proud of.
+      Ordered Dithering is a technique that achieves a smooth blend of values in an image by changing the frequancy of
+      pixel colors through a patterned grid, achieved with only two colors to create depth in an image. My approach takes
+      place in the fragement shader, which asks how dark a given area of geometry should be and assigns it a blending pattern
+      between the two input colors to create a rich transition from one color (light) and the other (dark). 
+    </p>    
+      <div class="media-block">
+        <img src="../assets/images/Dithering Shader/DitherZoom.png" alt="Detail shot">
+      </div>
+    <p>
+     The dithering effect can be adjusted in the realtime enviroment with the 'o' and 'p' to show what different interpolation values do
+     to the final image. 
     </p>
-
-    <!-- A grid for supporting photos/videos. Add or remove media-block
-         divs as needed; the grid re-flows automatically. -->
-    <div class="media-grid">
-      <div class="media-block">
-        <img src="../assets/images/project-3-detail-1.jpg" alt="Detail shot 1">
-      </div>
-      <div class="media-block">
-        <img src="../assets/images/project-3-detail-2.jpg" alt="Detail shot 2">
-      </div>
-      <div class="media-block">
-        <!-- Example of an embedded video instead of an image -->
-        <video controls poster="../assets/images/project-3-video-poster.jpg">
-          <source src="../assets/videos/project-3-demo.mp4" type="video/mp4">
-          Your browser doesn't support embedded video.
-        </video>
-      </div>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/WithoutDithering.png" alt="Example without dithering">
+    </div>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/WithDithering2.png" alt="Example with moderate dithering">
+    </div>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/With Dithering.png" alt="Example with exessive dithering">
+    </div>
+    <h2>Scene Details</h2>
+    <p>
+      The scene was constructed of a 3D scan of St. Peters Basilica in Rome and a mesh of a hydra found for free use
+      in an educational context on turbosquid. Basic 3D scene functions built up throughout the quarter are used, like
+      a pitch and yaw camera, MVP matrices for models, directional scene lighting, Spline tours of the scene , and 
+      Camera restrictions in the form of a 'fly' mode and a 'walk' mode for scene traversal. Other tools built but not
+       utilized in this final scene are a hierarchecal animation system, texture mapping, and point lights. 
+    </p>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/DitherHydra.jpg" alt="Example with moderate dithering">
+    </div>
+    <div class="media-block">
+        <img src="../assets/images/Dithering Shader/SanPietro.png" alt="Example With Camera Rotated">
     </div>
 
-    <h2>What I'd do differently</h2>
-    <p>
-      Optional, but reflective sections like this make a project page feel
-      like a real log rather than a marketing page. Delete if not needed.
-    </p>
-
-    
   </main>
 
   <!-- ============ FOOTER ============ -->
