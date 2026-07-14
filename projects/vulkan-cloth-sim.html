@@ -48,29 +48,59 @@
 
     <h2>Overview</h2>
     <p>
-      Describe what the project is, the problem it solves, and why you built it.
-      Two or three sentences is usually enough — this section sets the scene
-      before the details below.
+      This project was a collaboration between me and Claire Ogawa for the final project of CSC 572 Graduate
+      Computer Graphics. The intention was to build a realtime enviroment using the Vulkan Graphics Library, 
+      and to use a compute shader to create a simple cloth simulation. This was the first time either of us
+      used vulkan, and so setting up the project from scratch was a massive, multi week long task.   
     </p>
+    
+    <p>
+      Cloth simulation has traditionally been done using many different methods. One of the most efficient 
+      methods used in modern graphics programming is the utilization of GPU side compute shaders to calculate
+       the physical interactions for a simulated cloth plane. Compute shaders can be implemented with every 
+       industry standard modern graphics library, and for this project we adapted the work of Va Hongly,
+        Min-Hyung Choi, and Min Hong in Vulkan.
+    </p>
+
+    <p>
+      Cloth simulation is important for modeling garments in media, like films, video games, contributing to both
+      realism and stylistic rendering. Modeling this behavior contributes to scene aesthetics, immersion, and believable 
+      physics interactions. It is implemented using “the mass-spring system,” and both implicit and adaptive constraints [6].
+      Our project will implement these physics mechanisms using compute shaders to construct a believable cloth simulation.
+      </p>
 
     <h2>How it works</h2>
     <p>
-      Go into the interesting technical or design details here. This is the
-      place for diagrams, explanations of tricky parts, or decisions you're
-      proud of.
+      This project takes a plane and texture, applies according transforms, and runs through a shader pipeline to simulate cloth motion.
+      The Shader takes data in the form of a UBO (Uniform Buffer Object) full of simulation parameters, then transforms the cloth based
+      on its position, velocity, and spring constrains from the previous frame.
     </p>
 
-    <!-- A grid for supporting photos/videos. Add or remove media-block
-         divs as needed; the grid re-flows automatically. -->
-    <div class="media-grid">
-      <div class="media-block">
-        <img src="../assets/images/project-1-detail-1.jpg" alt="Detail shot 1">
+    <p>
+      The use of the compute shader makes the simulation extremely performant on dedicated GPU hardware in real time. We included 
+      texture mapping and a key to flip the gravity and rotate the object to observe the results from different angles.
+    </p>
+    <div class="media-block">
+        <img src="../assets/images/Cloth Sim/VCS1.png" alt="Shrink Shot">
       </div>
       <div class="media-block">
-        <img src="../assets/images/project-1-detail-2.jpg" alt="Detail shot 2">
+        <img src="../assets/images/Cloth Sim/VCS2.png" alt="Stretch Shot">
       </div>
+
+    <p>
+      Here is a wireframe view of the cloth simulation.
+    </p>
+      <div class="media-block">
+        <video controls poster="../assets/images/Cloth Sim/Clothsim.png">
+          <source src="../assets/images/Cloth Sim/Wireframe.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+    
       
-    </div>
+      
+      
+    
 
     <h2>What I'd do differently</h2>
     <p>
@@ -78,16 +108,10 @@
       like a real log rather than a marketing page. Delete if not needed.
     </p>
 
-    <div class="project-nav-links">
-      <a href="project-1.html">&larr; Fig. 01 (this page)</a>
-      <a href="project-2.html">Fig. 02: Project Two &rarr;</a>
-    </div>
-  </main>
-
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; 2026 Your Name.</p>
+      <p>&copy; 2026 Aidan Ream.</p>
       <p>Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
     </div>
   </footer>
