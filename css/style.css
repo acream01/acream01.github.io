@@ -369,6 +369,14 @@ p { color: var(--line); margin: 0 0 1em 0; }
   border-radius: 2px;
   padding: 3px 7px;
 }
+.skill-category-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  margin: 24px 0 10px 0;
+}
 
 /* =========================================================
    PROJECT DETAIL PAGE
