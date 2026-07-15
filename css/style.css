@@ -288,7 +288,6 @@ p { color: var(--line); margin: 0 0 1em 0; }
   display: block;
   color: var(--line);
   text-decoration: none;
-  group: card;
 }
 .project-card:hover { text-decoration: none; }
 
@@ -355,6 +354,7 @@ p { color: var(--line); margin: 0 0 1em 0; }
 
 .tag-row {
   margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
