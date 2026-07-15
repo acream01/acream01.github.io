@@ -6,8 +6,8 @@
 
 :root {
   /* -- color -- */
-  --bg:         #0f2a4a;   /* blueprint navy, page background */
-  --bg-panel:   #12335a;   /* slightly lighter panel background */
+  --bg:         #030a13;   /* blueprint navy, page background */
+  --bg-panel:   #141a22;   /* slightly lighter panel background */
   --line:       #c9d6e4;   /* pale ink — primary text & rules */
   --line-dim:   #7d93ae;   /* muted ink — secondary text */
   --accent:     #f2a93b;   /* amber stamp — links, highlights */
