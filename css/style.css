@@ -100,7 +100,7 @@ p { color: var(--line); margin: 0 0 1em 0; }
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  background: #030f1f; 
+  background: #020811; 
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(201, 214, 228, 0.25);
 }
