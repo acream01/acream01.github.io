@@ -14,6 +14,13 @@
 </head>
 <body>
 
+  <!-- ============ WEBGPU BACKGROUND ============ -->
+  <!-- Full-viewport, fixed, and behind everything else (see .bg-canvas in
+       style.css). Renders a low-poly fox that turns to face the cursor
+       and hops on click. Quietly removes itself if WebGPU isn't
+       available, leaving the plain blueprint-grid CSS background. -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
   <!-- ============ NAV ============ -->
   <nav class="site-nav">
     <div class="wrap">
@@ -152,5 +159,6 @@
   </footer>
 
   <script src="js/nav.js"></script>
+  <script type="module" src="js/webgpu-fox.js"></script>
 </body>
 </html>
