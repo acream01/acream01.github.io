@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragment Shader Ray Marcher</title>
+  <meta name="description" content="In-depth look at Project One.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+ <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html" class="brand"><span class="brand-mark">&gt;</span> Aidan Ream</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects"  aria-current="page">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="mailto:aidanream01@gmail.com.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ PROJECT HEADER / TITLE BLOCK ============ -->
+  <header class="wrap project-header">
+    <h1>Fragment Shader Ray Marcher</h1>
+  </header>
+
+  <!-- ============ MEDIA + WRITE-UP ============ -->
+  <main class="wrap project-body">
+    <div class="media-block">
+      <img src="../assets/images/Raymarcher/Raymarcher_Thumbnail.png" alt="Ray Tracing Example Image">
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+      Raymarcher made following Michael Walczyk tutorial intro to ray marching
+ 
+    Program uses openGl to render a single triangle primitive covering the screen with texture coordinates normalized along screen space.
+    Almost all of the magic is happening in the fragment shader, where signed distance funcitons are being used to create 3D worlds out of math.
+    Shoutout Inigo Quilez, Michael Walczyk and many many more people who have documented their adventures in raymarching.
+
+    Initial openGL basecode taken from Dr Zoe Wood and modified by Aidan Ream for Intro to Computer Graphics 471:
+    </p>
+      <h3>
+        What is raymarching?
+      </h3>
+      <p>
+        Raymarching is a computer graphics technique where you slowly march a ray per fragment or pixel
+        towards a scene defined by signed distance functions (SDFs). SDFs are mathematical functions that
+        define geometry in 3D space, returning a positive value if you are outside of the shape, 0 along
+        the parimeter, and negative values inside of the shape. We can use the mininum result of these functions
+        per ray to find the maximum safe distance we can step per iteration.
+      </p>
+
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Raymarcher/Raymarch_function.png" alt="Teapot without vertex normals">
+        </div>
+      </div>
+
+      <h3>
+        Branching in shaders?
+      </h3>
+      <p>
+        Branching is generally considered a preformance tanker when used in shaders. If two
+        function calls within the same shader follow different paths in code excecution, you
+        experience something called warp divergence which *can* be particularly bad for preformance.
+        It makes it so your shader code that is supposed to run simultaniously runs in two seperate warps,
+        essentially eliminating the reason to be using the GPU in the first place. This effect is a tradeoff 
+        however, and in the case of raymarching an early exit condition can actually improve preformance, it
+        all depends on the usecase and tradeoffs. 
+      </p>
+
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Raymarcher/edge_artifact.png" alt="Teapot without vertex normals">
+        </div>
+      </div>
+       
+      <h3>
+        Playing around with simple SDF world layouts and animation 
+      </h3>
+      <p>
+        Using simple sinusodal distortions to the results of the SDFs can produce very cool results.
+      </p>
+
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Raymarcher/Example1.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Raymarcher/Example2.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Raymarcher/Example3.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Raymarcher/Boxes.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+
+        
+    <h2>Future Work</h2>
+    <p>
+      Additional work to be implemented is 3D fractal rendering, SDF modeling, raymarched clouds, and more!
+
+    <section class="tech-stack">
+  <h2>Built with</h2>
+  <div class="tag-row">
+    <span class="tag">C++</span>
+    <span class="tag">OpenGL</span>
+    <span class="tag">GLSL</span>
+  </div>
+    <a class="repo-link" href="https://github.com/acream01/Raymarcher" target="_blank" rel="noopener">
+      Link to Github Repo
+    </a>
+</section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Aidan Ream.</p>
+      <p>Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>
