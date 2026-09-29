@@ -81,6 +81,19 @@
 
       <div class="media-grid">
         <div class="media-block">
+          <img src="../assets/images/Raymarcher/PixelWarpInfo.png" alt="Teapot without vertex normals">
+        </div>
+      </div>
+      <p>
+        Profiling a version that uses the early exit vs one without using Nsight graphics, we can see that without
+        that condition you have far more misses with the GPU being used for much more undeeded work. The number
+        of warps that fail to launch is a major difference between the two. With the exit condition the
+        GPU is being utilized far more compared to the one without. The efficiancy per frame being drawn is much higher,
+         since each frame is only as fast as the last ray finishes marching.  
+      </p>
+
+      <div class="media-grid">
+        <div class="media-block">
           <img src="../assets/images/Raymarcher/edge_artifact.png" alt="Teapot without vertex normals">
         </div>
       </div>
