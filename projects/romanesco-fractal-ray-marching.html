@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragment Shader Ray Marcher</title>
+  <meta name="description" content="In-depth look at Project One.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+ <!-- ============ NAV ============ -->
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html" class="brand"><span class="brand-mark">&gt;</span> Aidan Ream</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects"  aria-current="page">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ PROJECT HEADER / TITLE BLOCK ============ -->
+  <header class="wrap project-header">
+    <h1>Romanesco Fractal Ray Marching</h1>
+  </header>
+
+  <!-- ============ MEDIA + WRITE-UP ============ -->
+  <main class="wrap project-body">
+    <div class="media-block">
+      <img src="../assets/images/Romanesco Fractal Raymarcher/LOD4.png" alt="Romanesco Render Image">
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+      Raymarcher made following Michael Walczyk tutorial intro to ray marching. 
+    </p>
+    <p>
+    Implicit Romanesco Broccoli surface developed using Rodrigo Setti's article on medium "The Broccoli Equation". 
+ 
+    <p>
+      Program uses openGl to render a single triangle primitive covering the screen with texture coordinates normalized along screen space.
+      Almost all of the magic is happening in the fragment shader, where signed distance funcitons are being used to create 3D worlds out of math.
+      Shoutout Inigo Quilez, Michael Walczyk and many many more people who have documented their adventures in raymarching.
+    </p>
+
+      <h3>
+        What is fractal raymarching?
+      </h3>
+      <p>
+        Raymarching is a computer graphics technique where you slowly march a ray per fragment or pixel
+        towards a scene defined by signed distance functions (SDFs). In fractal raymarching, the sdf we are comparing
+        against recursivly adds detail on each layer defined by mathematical positioning for following layers. Many
+        examples include renders people have made of fractal objects like the Menger Sponge. Inspired by
+        these fractal raymarching projects and my favorite mathematical vegetable Romanesco Broccoli, I created this
+        quick project to render a simple approximation of the form and grow my understanding of raymarching.   
+      </p>
+
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/romanescohero.jpg" alt="Image of Romanesco Broccoli">
+        </div>
+      </div>
+
+      <h3>
+        Why Romanesco Broccoli?
+      </h3>
+      <p>
+        Romanesco Broccoli is a vegitable, more specifically a flower, that is very similar in texture and flavor to cauliflower.
+        It is distinct for its fractal form, which follows a logarithmic spiral of self similar buds along the form of the flower.
+        Its striking shape is the inspiration for this short project.
+      </p>
+
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/FirstConeRender.png" alt="Initial Cone Render">
+        </div>
+      </div>
+      <p>
+        After debbugging for a while, I finally achieved the raymarched rendering of a cone with smaller cones following
+        a logarithmic spiral. With some simple changes to the parameters of the spiral we can edit how it adds detail along
+        the cone such as the number of children generated, the level of detail, the spacing, and the size of the buds.
+      </p>
+
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Romanesco Fractal Raymarcher/NodeTransforms.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <p>
+        Here are some of the best intermediate results I achieved, as well as some animations tweaking the parameters.
+      </p>
+
+
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/LOD3.png" alt="level of detal 3">
+        </div>
+      </div>
+
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Romanesco Fractal Raymarcher/AnimatedSpiral.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Romanesco Fractal Raymarcher/Flybye.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+      <div class="media-block">
+        <video controls >
+          <source src="../assets/images/Romanesco Fractal Raymarcher/LODincrement.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
+     
+
+    <section class="tech-stack">
+  <h2>Built with</h2>
+  <div class="tag-row">
+    <span class="tag">C++</span>
+    <span class="tag">OpenGL</span>
+    <span class="tag">GLSL</span>
+  </div>
+    <a class="repo-link" href="https://github.com/acream01/Raymarcher" target="_blank" rel="noopener">
+      Link to Github Repo. Branch Romanesco.
+    </a>
+</section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Aidan Ream.</p>
+      <p>Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>
