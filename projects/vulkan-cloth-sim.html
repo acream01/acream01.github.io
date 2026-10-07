@@ -41,7 +41,7 @@
     
    <div class="media-block">
         <video controls poster="../assets/images/Cloth Sim/Clothsim.png">
-          <source src="../assets/images/Cloth Sim/Sim-Vid.mp4" type="video/mp4">
+          <source src="../assets/images/Cloth Sim/ClothSimFast.mp4" type="video/mp4">
           Your browser doesn't support embedded video.
         </video>
       </div>
@@ -87,17 +87,64 @@
       The use of the compute shader makes the simulation extremely performant on dedicated GPU hardware in real time. We included 
       texture mapping and a key to flip the gravity and rotate the object to observe the results from different angles.
     </p>
-    
+    <div class="media-block">
+        <video controls poster="../assets/images/Cloth Sim/Clothsim.png">
+          <source src="../assets/images/Cloth Sim/Sim-Vid.mp4" type="video/mp4">
+          Your browser doesn't support embedded video.
+        </video>
+      </div>
 
-    <p>
-      Here is a wireframe view of the cloth simulation.
-    </p>
+      <h3>What is a compute shader?</h3>
+      <p>
+        A compute shader is an optional extra step in a graphics pipeline that uses the power of the gpu for calculations
+        or other operations. It has a lot of use cases, as it is optimized for parts of a real time program that aren't 
+        coloring fragments or moving vertices around. There are other shaders in this vain like geometry shaders 
+        and tesselation shaders! Compute shaders are just the most versitle of them.
+        
+      </p>
+
+    <h3>
+      Wireframe view of the cloth simulation.
+    </h3>
       <div class="media-block">
         <video controls poster="../assets/images/Cloth Sim/Clothsim.png">
           <source src="../assets/images/Cloth Sim/Wireframe.mp4" type="video/mp4">
           Your browser doesn't support embedded video.
         </video>
       </div>
+      <h2>After submission</h2>
+      <p>
+        Later on I wanted to have a solid base project to build a vulkan application around, but there was one problem.
+        A 5 week vulkan application had many problems, the main one being file organization. Just about every part of the
+        application was found in our nearly 3k lines of code in our main file (Yucky). I went ahead and spent a couple days
+        refactoring the megafile into their own classes and files.
+      </p>
+
+      <h2>Reflection and future work:</h2>
+      <p>
+        There we're two reasons we had for choosing this as the final project for the class: 
+      </p>
+      <p>first I wanted to build an understanding
+        with hands on experience of Vulkan as a graphics library. Why would you want to use it? What are its advantages/disadvantages?
+        How is it different from OpenGL? Should you use it for a project like this? I definately got the answer, that it is not
+        built for this kind of project. Not that it didnt work, it was very performant and the project as a whole was a success,
+        but the amount of set up it takes to even draw a single triangle is massive in Vulkan. This is very intentional, as it gives
+        you fine tuned control over every piece of the engine! This is where the advantages are, lower driver overhead, fine tuned
+        decisions for performance, perfect for a large game engine or real time application! But our project was small and simple, ergo
+        not really the tool for the job. I was really glad I chose to do it despite this, since it gives me the context as to why!
+      </p>
+      <p>
+        The second reason I chose this project was to build a cloth simluation and learn compute shaders. The compute shaders
+        were definately used and very cool to learn! The cloth simulation worked, and thats about all that I can say about it
+        positivly. Most of the time went into building a developing a full Vulkan renderer in 5 weeks, which was a much bigger
+        task than initially expected. The cloth simulation was kind of neglected as the final product, we didn't have a 
+        chance to dive into the more interesting problems of one like self intersections.
+      </p>
+      <p>
+        Future work would be to implement some form of self intersection checking, some thickness to the cloth, and the ability
+        to incorporate it into a larger game engine situation. Even with all its problems, this project was a fantastic learning experience!
+      </p>
+    
 
        <section class="tech-stack">
   <h2>Built with</h2>

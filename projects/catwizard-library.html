@@ -105,12 +105,16 @@
     <h3>Skeletal Animation System</h3>
     <p>
       My main contribution was incorporating out system for bone transformations with vertex
-      weights so our character was able to be animated. There were several issues I ran into while
-      creating this feature, mainly the transformations were not constistant between my animation software
-      Blender and our game. In our game, the transformations would completely warp the character model, or
-      take the character out of world space and distort it in object space, disconnected from the camera. 
-      After weeks of debugging and reworking, the animation system worked and I was able to import, access, 
-      and play animations in realtime gameplay!
+      weights so our character was able to be animated. This system uses asset defined "bones" that
+      transfrom geometry verteces based on a hierarchy. For example, moving an arm bone rotates and moves
+      all of the pieces of the arm, but moving the torso will also carry all of the appendages with it! This
+      system is called skeletal animation, or "skinning".       
+    </p>
+    <p>
+      Problems: There were several issues I ran into while creating this feature, mainly the transformations were not 
+      constistant between my animation software Blender and our game. In our game, the transformations would completely warp 
+      the character model, or take the character out of world space and distort it in object space, disconnected from the camera. 
+      After weeks of debugging and reworking, the animation system worked and I was able to import, access, and play animations in realtime gameplay!
     </p>
       <div class="media-block">
         <video controls poster="../assets/images/CatLibrary/AnimWorkThumb.png">
@@ -128,8 +132,7 @@
       This project was my first introduction to the process of 3D modeling. I have since had far more experience
       and would do a much better job, but this role included 10+ hours of learning Blender and practicing.
       I 3D modeled our main character and the elementals, including material values and animations exported into an
-      fbx file and incorporated into the game. The characters were created to utilize a lowpoly aesthetic which
-      I have since had much more experience in modeling. 
+      fbx file and incorporated into the game. The characters were created to utilize a lowpoly aesthetic.
     </p>
         
       <div class="media-block">
@@ -146,7 +149,7 @@
     </p>
     <h3>Gameplay Design</h3>
     <p>
-      The final most notable contribution was my additions to the gameplay design. The concept for this game came from a 
+      The final notable contribution was my additions to the gameplay design. The concept for this game came from a 
       combination of the teams brainstorming ideas, like the cute cat library aesthetic and the roguelike elements, that
       I combined and pitched to the team. 
     </p>
