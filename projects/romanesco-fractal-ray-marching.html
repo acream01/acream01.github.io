@@ -36,7 +36,7 @@
   <!-- ============ MEDIA + WRITE-UP ============ -->
   <main class="wrap project-body">
     <div class="media-block">
-      <img src="../assets/images/Romanesco Fractal Raymarcher/LOD4.png" alt="Romanesco Render Image">
+      <img src="../assets/images/Romanesco Fractal Raymarcher/AmbientOcclusion&Diffuse.png" alt="Romanesco Render Image">
     </div>
 
     <h2>Overview</h2>
@@ -104,6 +104,29 @@
       <div class="media-grid">
         <div class="media-block">
           <img src="../assets/images/Romanesco Fractal Raymarcher/LOD3.png" alt="level of detal 3">
+        </div>
+      </div>
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/LOD4.png" alt="level of detal 4">
+        </div>
+      </div>
+
+      <p>
+        A simple effect we can add to the render is a kind of ambient occlusion, where we accumulate more light the farther
+        we travel. Based on how the raymarcher traverses through the screen, areas of crowded geometry will naturally have more 
+        steps to reach the innermost points of crevaces. This creates a render that looks far more real than a computer generated image,
+        even if it is a quick approximation. Here is a render with just the ambient occlusion added on. 
+      </p>
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/AmbientOcclusion.png" alt="Ambient Occlusion">
+        </div>
+        <p>Here is the render with both ambient occlusion and the diffuse shadows we have from the lighting.</p>
+      </div>
+      <div class="media-grid">
+        <div class="media-block">
+          <img src="../assets/images/Romanesco Fractal Raymarcher/AmbientOcclusion&Diffuse.png" alt="Ambient occlusion and diffuse">
         </div>
       </div>
 
