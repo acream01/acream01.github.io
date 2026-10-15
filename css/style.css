@@ -56,6 +56,24 @@ button:focus-visible {
 
 img, video { max-width: 100%; display: block; }
 
+.canvas-container {
+  display: grid;
+  place-items: center;
+
+}
+
+#bg-canvas {
+  position:flex;
+  inset: 0;
+  width: 80vw;
+  height:100vh;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  border: 2px solid var(--line-dim);
+
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -182,9 +200,7 @@ p { color: var(--line); margin: 0 0 1em 0; }
   .nav-links a[aria-current="page"] { border-bottom: 1px solid var(--accent); padding-bottom: 16px; }
 }
 
-/* =========================================================
-   HERO / INTRO — styled like a drawing title block
-   ========================================================= */
+
 
 .hero {
   padding: 72px 0 56px;
@@ -198,7 +214,6 @@ p { color: var(--line); margin: 0 0 1em 0; }
   background: rgba(238, 241, 234, 0.02);
 }
 
-/* corner registration marks — the signature detail */
 .title-block::before,
 .title-block::after,
 .hero-corner-a,
@@ -373,10 +388,6 @@ p { color: var(--line); margin: 0 0 1em 0; }
   margin: 24px 0 10px 0;
 }
 
-/* =========================================================
-   PROJECT DETAIL PAGE
-   ========================================================= */
-
 .breadcrumb {
   padding: 28px 0 0;
   font-family: var(--font-mono);
@@ -431,9 +442,6 @@ p { color: var(--line); margin: 0 0 1em 0; }
   flex-wrap: wrap;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
 
 .site-footer {
   border-top: 1px solid rgba(201, 214, 228, 0.25);
